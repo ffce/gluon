@@ -29,6 +29,10 @@ o:depends("enabled", '1')
 o.datatype = "wpakey"
 o.default = uci:get(config, primary_iface, "key")
 
+o = s:option(Flag, "wds", translate("Enable WDS"))
+o:depends("enabled", '1')
+o.default = uci:get_bool(config, primary_iface, "wds") and o.enabled or o.disabled
+
 function f.handle(self, state, data)
   if state == FORM_VALID then
     uci:foreach(config, "wifi-device",
@@ -46,6 +50,7 @@ function f.handle(self, state, data)
                         encryption = 'psk2',
                         ssid       = data.ssid,
                         key        = data.key,
+                        wds        = data.wds or '0',
                         disabled   = 0,
                       }
           )

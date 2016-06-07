@@ -19,6 +19,9 @@ msgstr "Name (SSID)"
 msgid "Private WLAN"
 msgstr "Privates WLAN"
 
+msgid "Enable WDS"
+msgstr "WDS aktivieren"
+
 msgid ""
 "Your node can additionally extend your private network by bridging the WAN "
 "interface with a seperate WLAN. This feature is completely independent of "

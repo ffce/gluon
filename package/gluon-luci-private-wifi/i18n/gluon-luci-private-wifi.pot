@@ -10,6 +10,9 @@ msgstr ""
 msgid "Private WLAN"
 msgstr ""
 
+msgid "Enable WDS"
+msgstr ""
+
 msgid ""
 "Your node can additionally extend your private network by bridging the WAN "
 "interface with a seperate WLAN. This feature is completely independent of "
